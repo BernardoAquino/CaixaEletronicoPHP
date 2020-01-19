@@ -1,7 +1,16 @@
 <?php
 header("Content-type: text/html; charset=utf8");
-echo '<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>';
+echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>s';
 
 $banco = $_POST["banco"];
 $agencia = $_POST["agencia"];
@@ -16,26 +25,26 @@ $nota10 = 0;
 $nota5 = 0;
 $nota1 = 0;
 
-for($x = 1; $x > 0; $x++) {
-    if($dinheiro >= 100) {
+for ($x = 1; $x > 0; $x++) {
+    if ($dinheiro >= 100) {
         $dinheiro -= 100;
         $nota100++;
-    }elseif($dinheiro >= 50) {
+    } elseif ($dinheiro >= 50) {
         $dinheiro -= 50;
         $nota50++;
-    }elseif($dinheiro >= 20) {
+    } elseif ($dinheiro >= 20) {
         $dinheiro -= 20;
         $nota20++;
-    }elseif($dinheiro >= 10) {
+    } elseif ($dinheiro >= 10) {
         $dinheiro -= 10;
         $nota10++;
-    }elseif($dinheiro >= 5) {
+    } elseif ($dinheiro >= 5) {
         $dinheiro -= 5;
         $nota5++;
-    }elseif($dinheiro >= 1) {
+    } elseif ($dinheiro >= 1) {
         $dinheiro -= 1;
         $nota1++;
-    }else {
+    } else {
         break;
     }
 }
@@ -77,7 +86,7 @@ $resto = $resto % 1;*/
         <input type="number" name="nota100" value="<?php echo $nota100 ?>" readonly>
         <img src="img_notas/10reais.jpg">
         <input type="number" name="nota10" value="<?php echo $nota10 ?>" readonly>
-     </div>
+    </div>
     <div class="col-sm-4" align="center">
         <img src="img_notas/50reais.jpg">
         <input type="number" name="nota50" value="<?php echo $nota50 ?>" readonly>
